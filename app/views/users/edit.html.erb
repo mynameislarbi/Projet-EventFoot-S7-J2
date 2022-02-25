@@ -1,0 +1,50 @@
+<h1 style="color:#fe4219">Editer le profil</h1>
+
+
+
+
+<%= form_for @user do |f|%>
+  <div class="container contact " style="height:80vh">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="contact-info">
+          <img src="https://image.ibb.co/kUASdV/contact-image.png" alt="image"/>
+          <h2>Modifier votre profil</h2>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="contact-form">
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="fname">Prénom :</label>
+            <div class="col-sm-10">          
+            <%= f.text_field :first_name, class:"form-control area"%>
+            </div>
+          </div>
+
+          <div class="form-group mt-3">
+            <label class="control-label col-sm-4" for="lname">Nom de famille :</label>
+            <div class="col-sm-10">          
+            <%= f.text_field :last_name, class:"form-control area"%>
+            </div>
+          </div>
+
+          <div class="form-group mt-3">
+            <label class="control-label col-sm-4" for="lname">Description :</label>
+            <div class="col-sm-10">          
+            <%= f.text_area :description, class:"form-control area"%>
+            </div>
+          </div>
+          
+          <div class="form-group">        
+            <div class="col-sm-offset-2 col-sm-10 mt-3">
+            <%= submit_tag "Modifier", class: 'btn btn-primary rounded-pill' %>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="<%= user_path(params[:id]) %>" class="btn btn-primary m-3 rounded-pill mt-4">👈 Revenir au profil</a>
+  </div>
+
+<% end %>

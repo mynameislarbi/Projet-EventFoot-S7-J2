@@ -1,0 +1,42 @@
+<div class="container mt-5">
+
+    <h3 class="m-3" style="color:#0a0a93">Événement organisé :</h3>
+    <hr>
+<div class="row">
+    <div class="col-md-6 col-s-12">
+        <div class="card card-small">
+            <div class="thumbnail">           
+                <img alt="Opt alp thumbnail" style ="filter: brightness(50%);"src="<%=@city.sample%>">                 
+            </div>
+            <div class="card-info">
+                <div class="moving">
+                    <h3><%= @event.title%></h3>
+                    <p>Localisation :<%= @event.location%></p>
+                    <p>Prix : <%=@event.price%></p>
+                    <a href="<%= root_path %>" style="color:#fff" class="btn btn-primary m-3 rounded-pill">S'inscrire</a>
+
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-s-12">
+        <div class="card card-small p-2">
+                    <p style="text-decoration:underline">Description :</p>
+                    <p class="p"><%= @event.description%></p>
+                    <br>
+                    <p style="text-decoration:underline">Date :</p>
+                    <p class="p"><%= @event.start_date%></p>
+                    <br>
+                    <p style="text-decoration:underline">Durée :</p>
+                    <p class="p"><%= @event.duration%>  minutes</p>
+                    
+        </div>
+    </div>
+</div>
+
+
+            <a href="<%= root_path %>" class="btn btn-primary m-3 rounded-pill">👈 Revenir au menu</a>
+
+</div>

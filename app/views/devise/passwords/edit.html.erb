@@ -1,0 +1,46 @@
+<h1 style="color:#fe4219">Changer de mot de passe</h1>
+
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+  <%= f.hidden_field :reset_password_token %>
+
+  <div class="container contact " style="height:80vh">
+    <div class="row">
+      <div class="col-md-3">
+
+      </div>
+      <div class="col-md-9">
+        <div class="contact-form">
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="fname">Nouveau mot de passe :</label>
+            <div class="col-sm-10">          
+            <% if @minimum_password_length %>
+              <em>(<%= @minimum_password_length %> characters minimum)</em><br />
+            <% end %>
+           <%= f.password_field :password, autofocus: true, autocomplete: "new-password", class:"form-control area"%>
+            </div>
+          </div>
+
+          <div class="form-group mt-3">
+            <label class="control-label col-sm-4" for="lname">Confirmer le mot de passe :</label>
+            <div class="col-sm-10">          
+            <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"form-control area"%>
+            </div>
+          </div>
+          
+          <div class="form-group mt-3">        
+            <div class="col-sm-offset-2 col-sm-10 mt-3">
+            <%= submit_tag "Changer mon mot de passe", class: 'btn btn-primary rounded-pill' %>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+<%= render "devise/shared/links" %>
+  </div>
+
+
+
+<% end %>

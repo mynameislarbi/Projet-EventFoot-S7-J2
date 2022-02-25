@@ -1,0 +1,37 @@
+
+
+<h1 style="color:#fe4219">Mot de passe oublié ?</h1>
+
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="container contact " style="height:80vh">
+    <div class="row">
+      <div class="col-md-3">
+
+      </div>
+      <div class="col-md-9">
+        <div class="contact-form">
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="fname">Email :</label>
+            <div class="col-sm-10">          
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control area" %>
+            </div>
+          </div>
+          
+          <div class="form-group mt-3">        
+            <div class="col-sm-offset-2 col-sm-10 mt-3">
+            <%= submit_tag "Récupérer mon mot de passe", class: 'btn btn-primary rounded-pill' %>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+<%= render "devise/shared/links" %>
+  </div>
+
+
+
+<% end %>
