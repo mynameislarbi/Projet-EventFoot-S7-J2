@@ -4,7 +4,7 @@
 
   /* Set a specific height */
   height: 100vh;
- 
+
   /* Position and center the image to scale nicely on all screens */
   background-position: center;
   background-repeat: no-repeat;
@@ -103,8 +103,9 @@ margin-left: 10px;
 }
 
 body{
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Fresca', sans-serif;
 }
+
 
 
 
