@@ -1,6 +1,6 @@
 # Web version 🌐
 
-Le site est en live ici 👉 [EventLyon](https://eventfoot.herokuapp.com/)
+Le site est en live ici 👉 [EventFoot](https://eventfoot.herokuapp.com/)
 
 # Installation ⚙️
 
