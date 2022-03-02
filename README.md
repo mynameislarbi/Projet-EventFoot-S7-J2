@@ -34,5 +34,5 @@ $ rails db:seed
 Rendez-vous ensuite sur le site en local 👉 [EventFoot](http://localhost:3000/)
 Enjoy !
 
-## Crédit
+# Crédit
 [Larbi Ait Hamadouche](https://github.com/mynameislarbi)
